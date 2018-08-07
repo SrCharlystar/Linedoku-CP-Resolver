@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linedoku CP Resolver", "Linedoku CP Resolver\Linedoku CP Resolver.csproj", "{68919E3E-ADE5-4BF3-A13C-30D42CE89EE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linedoku CP Solver", "Linedoku CP Resolver\Linedoku CP Solver.csproj", "{68919E3E-ADE5-4BF3-A13C-30D42CE89EE6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linedoku CP Solver Console", "Linedoku CP Solver Console\Linedoku CP Solver Console.csproj", "{FDF1E3DE-4A6C-4A07-BED2-A77F9357C4AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C36233B1-9CC6-49AF-BA6E-B8B8CB468A3D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Linedoku CP Resolver\Linedoku CP Resolver.csproj">
+    <ProjectReference Include="..\Linedoku CP Resolver\Linedoku CP Solver.csproj">
       <Project>{68919e3e-ade5-4bf3-a13c-30d42ce89ee6}</Project>
-      <Name>Linedoku CP Resolver</Name>
+      <Name>Linedoku CP Solver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

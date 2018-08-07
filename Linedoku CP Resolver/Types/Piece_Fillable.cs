@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linedoku_CP_Resolver.Types {
+namespace Linedoku_CP_Solver.Types {
 	class Piece_Fillable : Piece{
 		/// <summary>
 		/// Generator used to fill this piece

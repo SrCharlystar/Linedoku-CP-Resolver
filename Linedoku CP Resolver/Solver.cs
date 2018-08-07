@@ -1,18 +1,18 @@
-﻿using Linedoku_CP_Resolver.Types;
+﻿using Linedoku_CP_Solver.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linedoku_CP_Resolver {
+namespace Linedoku_CP_Solver {
 	/// <summary>
 	/// Resolver class. Used in order to create and solve Linedoku maze.
 	/// 
 	/// Created by SrCharlystar, 2018
 	/// https://github.com/SrCharlystar/
 	/// </summary>
-	public class Resolver {
+	public class Solver {
 		/// <summary>
 		/// Labyrinth matrix. This will contain the main labyrinth to be resolved.
 		/// </summary>
@@ -26,7 +26,7 @@ namespace Linedoku_CP_Resolver {
 		/// <summary>
 		/// Constructor for Labyrinth class.
 		/// </summary>
-		public Resolver(Piece[,] maze) {
+		public Solver(Piece[,] maze) {
 			if (maze == null)
 				throw new Exception("Please provide a valid labyrinth.");
 			lab = maze;

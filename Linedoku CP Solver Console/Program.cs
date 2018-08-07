@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Linedoku_CP_Resolver;
-using Linedoku_CP_Resolver.Types;
+using Linedoku_CP_Solver;
+using Linedoku_CP_Solver.Types;
 
 namespace Linedoku_CP_Solver_Console {
 	class Program {
@@ -13,7 +13,7 @@ namespace Linedoku_CP_Solver_Console {
 			Console.WriteLine("If you find any bugs, please let me know. https://github.com/SrCharlystar \n");
 			Piece[,] lab = createLab();
 			Console.WriteLine("Lab successfully created. Please re-check your desired labyrinth is the one which follows:");
-			Resolver res = new Resolver(lab);
+			Solver res = new Solver(lab);
 			Console.WriteLine(res.ToString());
 			Console.WriteLine("If your labyrinth is not correct, please restart this application and create it again. If it is correct, press enter to start solving.");
 			Console.ReadLine();

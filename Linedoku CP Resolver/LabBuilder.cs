@@ -1,11 +1,11 @@
-﻿using Linedoku_CP_Resolver.Types;
+﻿using Linedoku_CP_Solver.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linedoku_CP_Resolver {
+namespace Linedoku_CP_Solver {
 	public class LabBuilder {
 		static int id = 0;
 		/// <summary>
