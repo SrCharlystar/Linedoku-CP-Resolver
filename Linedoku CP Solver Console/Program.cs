@@ -18,17 +18,20 @@ namespace Linedoku_CP_Solver_Console {
 			Console.WriteLine("If your labyrinth is not correct, please restart this application and create it again. If it is correct, press enter to start solving.");
 			Console.ReadLine();
 			Console.WriteLine("Trying to solve labyrinth...");
+			long startMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 			res.Solve(lab);
+			long endMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+			Console.WriteLine("Execution time: " + (endMillis-startMillis) + "ms");
 			Console.WriteLine("Press any key to exit");
 			Console.ReadLine();
 		}
 
 		private static Piece[,] createLab() {
-			Console.WriteLine("Let's start creating your labyrinth. At this moment all levels have same width and height, but I ask both because this application supports MxN with M != N labyrinth dimensions.");
+			Console.WriteLine("Let's start creating your labyrinth.");
 			Console.Write("Labyrinth width: ");
-			int x = Convert.ToInt32(Console.ReadLine());
+			int y = readInt();
 			Console.Write("Labyrinth height: ");
-			int y = Convert.ToInt32(Console.ReadLine());
+			int x = readInt();
 			Piece[,] lab = new Piece[x, y];
 			Console.WriteLine("OK. Lets start filling it. Please type:\n" +
 						"'g' if block is a Generator (The coloured ones)\n" +
@@ -44,7 +47,7 @@ namespace Linedoku_CP_Solver_Console {
 							case "g":
 								Console.WriteLine("You need to provide extra details for generators:");
 								Console.Write("Generator available moves: ");
-								int moves = Convert.ToInt32(Console.ReadLine());
+								int moves = readInt();
 								lab[i, j] = LabBuilder.Build(PieceTypes.Generator, ConsoleColor.Blue, moves, i, j);
 								break;
 							case "f":
@@ -62,6 +65,15 @@ namespace Linedoku_CP_Solver_Console {
 				}
 			}
 			return lab;
+		}
+
+		private static int readInt() {
+			try {
+				return Convert.ToInt32(Console.ReadLine());
+			} catch (Exception) {
+				Console.WriteLine("Invalid input. Please type a number: ");
+				return readInt();
+			}
 		}
 
 
