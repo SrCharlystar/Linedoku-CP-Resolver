@@ -22,6 +22,11 @@ namespace Linedoku_CP_Solver {
 		/// This attribute will be true only if a valid solution has already been found.
 		/// </summary>
 		private Boolean solutionFound = false;
+
+		/// <summary>
+		/// Where valid path will be stored
+		/// </summary>
+		public Piece[,] solution { get; private set; }
 		
 		/// <summary>
 		/// Constructor for Labyrinth class.
@@ -54,8 +59,6 @@ namespace Linedoku_CP_Solver {
 				return;
 			if (validSolutionFound()) {
 				solutionFound = true;
-				Console.WriteLine("Algorithm execution has ended: Valid solution found.");
-				Console.WriteLine(ToString());
 				return;
 			}
 			//Execute algorithm
@@ -69,6 +72,8 @@ namespace Linedoku_CP_Solver {
 								pieza.Parent = generadores[k];
 								generadores[k].AvailableMoves--;
 								run();
+								if (solutionFound)
+									return;
 								generadores[k].AvailableMoves++;
 								pieza.Parent = null;
 							}
@@ -160,7 +165,7 @@ namespace Linedoku_CP_Solver {
 			}
 			return true;
 		}
-
+		
 		/// <summary>
 		/// Gets lab representation
 		/// </summary>
@@ -190,7 +195,7 @@ namespace Linedoku_CP_Solver {
 			}
 			return output;
 		}
-
+		
 		/// <summary>
 		/// FOR TESTING PURPOSES ONLY, BEGINNER LEVEL 2
 		/// </summary>

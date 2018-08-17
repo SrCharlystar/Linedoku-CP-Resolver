@@ -21,6 +21,8 @@ namespace Linedoku_CP_Solver_Console {
 			long startMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 			res.Solve(lab);
 			long endMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+			Console.WriteLine("Algorithm execution has ended: Valid solution found.");
+			Console.WriteLine(res.ToString());
 			Console.WriteLine("Execution time: " + (endMillis-startMillis) + "ms");
 			Console.WriteLine("Press any key to exit");
 			Console.ReadLine();
