@@ -19,7 +19,7 @@ namespace Linedoku_CP_Solver_Console {
 			Console.ReadLine();
 			Console.WriteLine("Trying to solve labyrinth...");
 			long startMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-			res.Solve(lab);
+			res.Solve();
 			long endMillis = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 			Console.WriteLine("Algorithm execution has ended: Valid solution found.");
 			Console.WriteLine(res.ToString());
