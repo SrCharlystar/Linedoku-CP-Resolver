@@ -47,7 +47,7 @@ namespace Linedoku_CP_Solver {
 		/// <summary>
 		/// Public method used to run algorithm
 		/// </summary>
-		public void Solve(Piece[,] maze) {
+		public void Solve() {
 			run();
 		}
 
